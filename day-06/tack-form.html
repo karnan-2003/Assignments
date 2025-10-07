@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY-6 ASSIGNMENT</title>
+</head>
+<body>
+    <h1>USER TRAIN BOOKING FORM </h1>
+    <form action="connected to database" method="post"></form>
+
+    <fieldset>
+        <legend><strong>Basic personal information :</strong></legend>
+        <label for="fullname">Full Name : </label>
+        <input type="text" id="fullname" name="fullname" placeholder="First name"  required>
+        <input type="text" id="fullname" name="fullname" placeholder="Last name" required>
+        <br>
+        <br>
+        
+        <label for="gender">Gender : </label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <br>
+        <br>
+
+        <label for="age">Age : </label>
+        <input type="numer" id="age" name="age" placeholder="--Enter your Age--">
+
+        <br>
+        <br>
+
+        <label for="phone number">Ph.Number : </label>
+        <input type="number" id="number" name="number" placeholder="###########" required>
+
+        <br>
+        <br>
+
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+        <br>
+        <br>
+
+        <label for="address">Address : </label> <br>
+        <textarea name="address" id="address" placeholder="--Enter your Address-- " rows="5" cols="50" required></textarea>
+
+    </fieldset>
+
+    <fieldset>
+        <legend><strong>Ticket Quantity :</strong></legend>
+        
+
+        <label for="ticket">Tickets : </label>
+        <input type="number" id="ticket" >
+        <br>
+        <br>
+
+        <label for="date">Journey Date : </label>
+        <input type="date" id="date" name="date" required>
+        <br>
+        <br>
+        <label for="time">Journey Time : </label>
+        <input type="time" id="time" name="time" required>
+
+        <br>
+        <br>
+
+        <label for="choose the class">Choose The Class : </label>
+        <select name="class" id="class">
+        <option value=>--Select Your CLass</option>
+        <option value="frist">Frist Class</option>
+        <option value="second">Second Class</option>
+        <option value="third">Third class</option>
+        </select>
+        
+        
+    </fieldset>
+
+    <button type="submit">Submit</button>
+
+    </form>
+    
+</body>
+</html>
