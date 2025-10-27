@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display: block;
+            background-color: aqua;
+            height: 30px;
+            border: 3px solid rgb(245, 113, 113);
+        }
+
+        .inline{
+            display: inline;
+            background-color: rgb(190, 130, 247);
+            height: 40px;
+            border: 2px solid rgb(239, 255, 8);
+        }
+        .inlineblock{
+            display: inline-block;
+            background-color: rgb(180, 243, 117);
+            height: 50px;
+            width: 20%;
+            border: 4px solid rgb(116, 5, 126);
+
+        }
+        .none{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Experiment with all display values (block, inline, etc.):</h1>
+
+    <div class="block">
+        Takes up the full width available.
+      
+    </div>
+    <div class="inline">
+        Starts on a new line.Height and width can be set.
+
+    </div>
+    <div class="inlineblock">
+        Behaves like inline, but allows setting width and height
+
+    </div>
+
+    <div class="none">
+        The element is not rendered at all (disappears from layout and DOM visually).
+
+    </div>
+    
+
+                                                                                                                                                                                                                                                
+</body>
+</html>
