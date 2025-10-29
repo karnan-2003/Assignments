@@ -26,3 +26,4 @@ console.log(typeof rupees);
 console.log(typeof idcard);
 console.log(typeof fruits);
 console.log(typeof f);
+

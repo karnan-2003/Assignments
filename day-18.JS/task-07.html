@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Favorite color responce:</h1>
+    <p id="responce">Yes this color is good</p>
+    <script>
+        let color=prompt("Enter your favorite color").toLowerCase();
+        let fav=document.getElementById("responce");
+        switch(color){
+            case "red":
+            case "blue":
+            case "yellow":
+            case "pink":
+            case "gray":
+            case "purple":
+            case "orange":
+            case "green":
+                fav.style.color=color;
+                break;
+                default:
+                    fav.innerText="Sorry this color is not recognized";
+                    fav.style.color="green";
+
+        }
+
+    </script>
+</body>
+</html>

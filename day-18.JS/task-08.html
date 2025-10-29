@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Password check:</h2>
+  <p id="result"></p>
+  <script>
+    let password=prompt("Enter your password:");
+    let result=document.getElementById("result");
+    if(password>=8){
+      result.innerText="Your password secure";
+      result.style.color="green"
+    }else{
+      result.innerText="Your password not secure";
+      result.style.color="red"
+    }
+
+  </script>
+</body>
+</html>

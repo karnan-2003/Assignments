@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Today's Date and Time:</h2>
-    <P id="time"></P>
-
     <script>
-        let today= new Date();
-        document.getElementById("time").innerHTML=today;
-
+        let age=prompt("Enter your age:")
+        if(age>=18){
+            alert("You are eligible for drive");
+            
+        }else{
+            alert("You are not eligible for drive");
+            
+        }
     </script>
 </body>
 </html>

@@ -3,6 +3,7 @@ let b = 20;
 const c = 40;
 
 console.log(a,b,c);
+ 
 
 // reassigning values..
 
