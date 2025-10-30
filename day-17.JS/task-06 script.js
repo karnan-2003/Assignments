@@ -1,6 +1,6 @@
 // Student List:
 
-let name = "kavibalan";
+let name = "karnan";
 let age = 23;
 let course = "full strack"
 let isenrolled = true;
