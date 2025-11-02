@@ -1,12 +1,7 @@
-function karnan(){
-    console.log("HI karnan.");
-    
+function name() {
+    const name ="Karnan M"; 
+    for(i=1 ; i<=3; i++){ 
+        console.log(name);
+    }
 }
-
-function kalai(callback) {
-    
-    console.log("Hello kalai");
-    
-}
-
-kalai();
+name();
