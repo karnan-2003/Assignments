@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fruits:</h1>
+
+<ul id="name">
+  <li>Apple</li>
+  <li>Mango</li>
+</ul>
+
+<button onclick="addItem()">Add Item.!</button>
+
+<script>
+  function addItem() {
+    let newItem = document.createElement("li");
+    newItem.textContent = "Grapes";
+    document.getElementById("name").appendChild(newItem);
+  }
+  </script>
+</body>
+</html>
