@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create an input field that updates text live below it. -->
+     <h2>An input field that updates text live below it:</h2>
+
+<input type="text" id="content" placeholder="Enter something..!" oninput="mani()" >
+<p id="ar"></p>
+
+<script>
+    function mani(){
+      
+        let kalai =document.getElementById("content").value;
+        document.getElementById("ar").textContent = kalai;
+   
+         
+    }
+</script>
+</body>
+</html>

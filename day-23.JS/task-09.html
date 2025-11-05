@@ -1,0 +1,43 @@
+<!-- Create multiple buttons that change colors using addEventListener(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color</title>
+</head>
+<body id="center">
+  <h2>Click a Button to Change Background Color:</h2>
+
+  <button id="LightRed">Red</button>
+  <button id="LightGreen">Green</button>
+  <button id="LightBlue">Blue</button>
+
+  <script>
+    document.getElementById("LightRed").addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightred";
+    });
+
+    document.getElementById("LightGreen").addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightgreen";
+    });
+
+    document.getElementById("LightBlue").addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightblue";
+    });
+    document.getElementById("center").style.textAlign="center"
+  </script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple To-Do List</title>
+</head>
+<body>
+  <h2>Simple To-Do List</h2>
+
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button onclick="addTask()">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      const taskValue = document.getElementById("taskInput").value;
+      if (taskValue === "") return; 
+
+      
+      const li = document.createElement("li");
+      li.textContent = taskValue + " ";
+
+
+      const delBtn = document.createElement("button");
+      delBtn.textContent = "Remove";
+
+      delBtn.onclick = function() {
+        document.getElementById("taskList").removeChild(li);
+      };
+
+      li.appendChild(delBtn);
+
+      
+      document.getElementById("taskList").appendChild(li);
+      document.getElementById("taskInput").value = "";
+    }
+  </script>
+</body>
+</html>
+
