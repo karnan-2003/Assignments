@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>School Id-card informations:</h3>
+
+     <input id="data" placeholder="Enter your bio data">
+     <p id="bio"></p>
+
+     <script>
+
+        document.getElementById("data").addEventListener("input", function(){document.getElementById("bio").textContent= "Hello students: Name:  "+this.value});
+     </script>
+
+</body>
+</html>
