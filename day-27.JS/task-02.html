@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Username and public res:</h3>
+    <div>Username:<p id="name"></p></div>
+    <div>Public repository:<p id="resp"></p></div>
+
+    <script>
+        fetch("https://api.github.com/users/karnan-2003 ")
+
+        .then(res=>res.json())
+        .then(data=>{
+            document.getElementById("name").textContent=data.login;
+            document.getElementById("resp").textContent=data.public_repos;
+        })
+        .catch(err=>console.error("error:", err))
+    </script>
+</body>
+</html>

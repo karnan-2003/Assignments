@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Followers Fetcher</title>
+</head>
+<body>
+  <h2>GitHub Followers Finder</h2>
+
+  <input type="text" id="username" placeholder="Enter GitHub username">
+  <button id="fetchBtn">Fetch Followers</button>
+
+  <div id="output"></div>
+
+  <script>
+    document.getElementById("fetchBtn").addEventListener("click", async () => {
+      const username = document.getElementById("username").value.trim();
+      const output = document.getElementById("output");
+      output.innerHTML = ""; 
+
+      if (!username) {
+        output.innerHTML = "<p style='color:red;'> Please enter a username.</p>";
+        return;
+      }
+
+      try {
+        const response = await fetch("https://api.github.com/users/karnan-2003");
+        
+        if (!response.ok) {
+          throw new Error(" Invalid username or user not found!");
+        }
+
+        const followers = await response.json();
+
+        if (followers.length === 0) {
+          output.innerHTML = "<p>No followers found.</p>";
+          return;
+        }
+
+        const list = document.createElement("ul");
+        followers.forEach(follower => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <img src="${follower.avatar_url}" width="40" height="40" 
+                 style="border-radius:50%;vertical-align:middle;margin-right:8px;">
+            <a href="${follower.html_url}" target="_blank">${follower.login}</a>
+          `;
+          list.appendChild(li);
+        });
+
+        output.appendChild(list);
+      } 
+      catch (error) {
+        output.innerHTML = `<p style='color:red;'>${error.message}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>

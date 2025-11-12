@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Followers Fetcher</title>
+  <style>
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h2>GitHub Followers Finder</h2>
+
+  <input type="text" id="username" placeholder="Enter GitHub username">
+  <button id="fetchBtn">Get Followers</button>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("fetchBtn").addEventListener("click", async () => {
+      const username = document.getElementById("username").value.trim();
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "";
+
+      if (!username) {
+        resultDiv.innerHTML = "<p style='color:red;'> Please enter a GitHub username.</p>";
+        return;
+      }
+
+      resultDiv.innerHTML = `
+        <div>
+          <span class="spinner"></span>Loading followers...
+        </div>
+      `;
+
+      try {
+        const response = await fetch("https://api.github.com/users/karnan-2003");
+
+        if (!response.ok) {
+          throw new Error(" Invalid username or user not found!");
+        }
+
+        const followers = await response.json();
+        resultDiv.innerHTML = ""; 
+
+        if (followers.length === 0) {
+          resultDiv.innerHTML = "<p>No followers found for this user.</p>";
+          return;
+        }
+
+        const list = document.createElement("ul");
+        followers.forEach(follower => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <img src="${follower.avatar_url}" width="40" height="40" style="border-radius:50%;vertical-align:middle;margin-right:8px;">
+            <a href="${follower.html_url}" target="_blank">${follower.login}</a>
+          `;
+          list.appendChild(li);
+        });
+
+        resultDiv.appendChild(list);
+      } catch (error) {
+        resultDiv.innerHTML = `<p style="color:red;">${error.message}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
