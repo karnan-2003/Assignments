@@ -1,3 +1,4 @@
+
 function formatText(text) {
     // Trim the string to remove spaces at start and end
     let trimmed = text.trim();

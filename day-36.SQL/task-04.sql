@@ -1,3 +1,4 @@
+
 CREATE TABLE comments (
     id INT,
     sentence VARCHAR(255)
