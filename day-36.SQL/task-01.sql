@@ -1,4 +1,5 @@
 
+
 SELECT 
     YEAR(birthdate) AS birth_year,
     MONTH(birthdate) AS birth_month,
