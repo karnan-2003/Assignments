@@ -1,22 +1,12 @@
+DELIMITER $$
 
-function monthsOld(birthdate) {
-    const today = new Date();
-    const birth = new Date(birthdate);
+CREATE FUNCTION months_old(birthdate DATE)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    RETURN TIMESTAMPDIFF(MONTH, birthdate, CURDATE());
+END $$
 
-    let yearsDifference = today.getFullYear() - birth.getFullYear();
-    let monthsDifference = today.getMonth() - birth.getMonth();
+DELIMITER ;
 
-    // Total months
-    let totalMonths = yearsDifference * 12 + monthsDifference;
-
-    // If the day of the month hasn't passed yet, subtract 1
-    if (today.getDate() < birth.getDate()) {
-        totalMonths -= 1;
-    }
-
-    return totalMonths;
-}
-
-// Example usage:
-let myBirthdate = '2000-05-15'; // YYYY-MM-DD
-console.log(`You are ${monthsOld(myBirthdate)} months old.`);
+SELECT months_old('2005-06-15') AS age_in_months;
