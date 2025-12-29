@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 function ToggleButton() {
-  const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(true);
 
   return (
     <div>
         <h2>3.ToggleButton:</h2>
       <button onClick={() => setIsOn(!isOn)}>
-        {isOn ? "ON" : "OFF"}
+        {!isOn ? "ON" : "OFF"}
       </button>
     </div>
   );

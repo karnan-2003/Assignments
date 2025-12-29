@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 function ColorButton() {
-  const [bgColor, setBgColor] = useState("blue");
+  const [bgColor, setBgColor] = useState("red");
 
   return (
     <div >
         <h2>5.ColorButton:</h2>
       <button
         onClick={() =>
-          setBgColor(bgColor === "blue" ? "green" : "blue")
+          setBgColor(bgColor === "red" ? "green" : "blue" )
         }
         style={{
           backgroundColor: bgColor,

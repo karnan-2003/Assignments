@@ -1,4 +1,4 @@
-let FavoriteMovie = [Billa, Goat, Aranmannai-1, Singam-1];
+let FavoriteMovie = ["Billa", "Goat", "Aranmannai-1", "Singam-1"];
 
 
 let laptop

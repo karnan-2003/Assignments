@@ -9,8 +9,8 @@ let rupees =("$")
 let idcard =
 {
     name :"dhoni" , number :7
-}
-let fruits =["apple","orange"];
+};
+const fruits =["apple","orange"];
 let f = function()
 {
     return "hi"; 
