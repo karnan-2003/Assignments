@@ -1,4 +1,4 @@
-mport java.util.Scanner;
+import java.util.Scanner;
 public class vowels{
     public static void main(String[]args){
         System.out.println("Enter the sentence");
